@@ -248,10 +248,8 @@ demo/
 
 ---
 
-## Notice
+## 备注
 
-This repository is intended for project showcase and educational purposes.
+本项目仅用于学习、展示和教育目的。
 
-Sensitive environment files and generated dependency folders are excluded from the repository.
-
-All rights reserved. The contents of this repository, including documentation, screenshots, design assets, and implementation details, may not be copied, modified, redistributed, or used for commercial purposes without prior written permission from the author.
+仓库中的文档、截图、架构图和项目说明未经作者书面许可，不得复制、修改、二次分发或用于商业用途。
