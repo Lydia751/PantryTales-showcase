@@ -1,246 +1,251 @@
 # PantryTales Showcase
 
-PantryTales 是一个 AI 智能厨房应用项目，围绕“从食材到菜谱再到烹饪”的完整家庭厨房场景展开。项目核心能力包括食材识别、库存管理、智能菜谱推荐、社区菜谱互动和烹饪辅助流程。
+> 中文说明：本仓库为 PantryTales 项目的公开展示版本，仅用于项目展示、技术交流与个人作品集展示，不包含完整项目源码。
 
-本仓库是 PantryTales 的公开作品展示版本，仅用于项目展示、能力说明和代码样例展示，不包含完整可运行源码。
+PantryTales is an AI-powered smart kitchen mobile application designed to support the complete cooking workflow, from ingredient recognition to recipe generation, cooking assistance, and community interaction.
 
----
+The system aims to help users better manage kitchen inventory, reduce food waste, and discover personalized recipes based on their available ingredients and dietary preferences.
 
-## 项目定位
-
-PantryTales 旨在解决家庭厨房中常见的几个问题：
-
-- 用户不知道现有食材可以做什么菜
-- 食材库存容易遗忘、浪费或重复购买
-- 菜谱推荐缺少对个人偏好、过敏和饮食限制的考虑
-- 烹饪过程缺少从识别、推荐、执行到记录的连续体验
-- 家庭成员之间缺少共享库存和协作管理方式
-
-项目通过 AI 图片识别、结构化食材管理、语义推荐和社区互动，将食材、菜谱和用户行为串联成一个完整的智能厨房工作流。
+This repository is a public showcase version of the project for portfolio and demonstration purposes only. The complete production source code is not included.
 
 ---
 
-## 本仓库内容
+# Project Overview
 
-该公开仓库只保留适合作品展示的内容：
+PantryTales addresses several common challenges in household cooking:
 
-- `README.md`：项目总览说明
-- `architecture/`：系统架构图、AI 推荐流程图、食材扫描流程图、向量检索流程图等
-- `screenshots/`：主要功能页面截图
-- `demo/`：项目演示入口
-- `code-samples/`：少量精选 C# 后端代码样例
+* Users often do not know what meals they can prepare using existing ingredients.
+* Ingredients are frequently forgotten, wasted, or purchased repeatedly.
+* Traditional recipe applications rarely consider dietary preferences and allergy restrictions.
+* Cooking applications often lack an end-to-end workflow from ingredient recognition to meal preparation.
+* Family members need a shared inventory and collaborative cooking experience.
 
-该仓库不用于本地运行、部署或二次开发。
+By combining AI image recognition, structured inventory management, personalized recipe generation, and community interaction, PantryTales provides an integrated smart kitchen experience.
 
 ---
 
-## 我的负责模块
+# Repository Contents
 
-### 1. 社区互动模块
+This public showcase repository only contains materials suitable for portfolio presentation.
 
-负责社区菜谱相关的互动能力，包括：
+Included:
 
-- 菜谱评论
-- 评论点赞
-- 菜谱点赞
-- 菜谱收藏
-- 用户互动事件记录
-- 互动计数与状态同步
+* `README.md`
+* `architecture/`
+* `screenshots/`
+* `demo/`
+* `code-samples/`
 
-代表性代码：
+This repository is not intended for local deployment or secondary development.
+
+---
+
+# My Contributions
+
+As a Software Development Intern, I was primarily responsible for:
+
+* Smart Recipe feature development
+* Ingredient Scan feature development
+* Recipe Scan feature development
+* Community module development
+* Frontend-backend integration and feature testing
+
+---
+
+# Core Modules
+
+## 1. Community Module
+
+Responsible for the design and implementation of the Community module, enabling users to share and interact with recipes.
+
+Features include:
+
+* Recipe publishing and content display
+* User interactions, including likes, comments, and saves
+* Community feed state synchronization
+* User interaction tracking and engagement management
+
+Representative code:
 
 ```text
 code-samples/Community/
 ```
 
-该部分展示了 API 入口设计、权限校验、事务处理、并发冲突处理和互动数据建模思路。
+This module demonstrates API design, business logic implementation, permission validation, interaction state management, and frontend-backend integration.
 
 ---
 
-### 2. 菜谱推荐模块
+## 2. Smart Recipe Module
 
-负责智能菜谱推荐相关逻辑，包括：
+Responsible for the development of the Smart Recipe feature, generating personalized recipes based on users' available ingredients, dietary preferences, and serving size requirements.
 
-- 根据用户偏好推荐菜谱
-- 根据过敏信息和饮食限制过滤不适合的菜谱
-- 基于标签匹配进行排序
-- 结合向量相似度进行 fallback 推荐
-- 在缺少个性化数据时回退到热门菜谱
+Main responsibilities include:
 
-代表性代码：
+* Generating personalized recipes based on current inventory ingredients
+* Supporting dietary preferences and allergy restrictions
+* Adjusting recipe recommendations according to the number of servings
+* Implementing recipe generation workflows and result presentation
+* Completing frontend-backend integration and feature testing
+
+Representative code:
 
 ```text
 code-samples/Recommendation/
 ```
 
-该部分展示了如何将用户偏好、业务规则、搜索条件、语义向量和热门数据结合到推荐流程中。
+This module demonstrates how inventory data, user preferences, and serving requirements are integrated to provide personalized cooking suggestions.
 
 ---
 
-### 3. AI / 图片识别模块
+## 3. AI / Vision Module
 
-负责 AI 图片识别相关能力，包括：
+Responsible for AI-powered image recognition capabilities based on GPT-4o Vision.
 
-- 食材图片识别
-- 小票/收据中的食材提取
-- 菜品图片识别
-- 根据图片生成菜谱内容
-- 多图片生成步骤、标签和食材列表
-- AI 返回结果的结构化解析
+Features include:
 
-代表性代码：
+* Ingredient Scan
+* Recipe Scan
+* Ingredient image recognition and structured parsing
+* Recipe image recognition and structured parsing
+* AI response processing and data persistence
+* Prompt design and exception handling
+
+Representative code:
 
 ```text
 code-samples/AI/
 ```
 
-该部分展示了图片校验、AI Provider 封装、提示词设计、JSON 结构化输出和异常处理方式。
+This module demonstrates AI service integration, image processing workflows, prompt engineering, structured JSON output, and error handling.
 
 ---
 
-## 功能预览
+# Feature Preview
 
-### 食材识别
+## Ingredient Recognition
 
 ![Ingredient Recognition](./screenshots/ingredient-recognition.png)
 
-### 智能菜谱推荐
+## Recipe Scan
+
+![Recipe Scan](./screenshots/recipe-scan.png)
+
+## Smart Recipes
 
 ![Smart Recipes](./screenshots/smart-recipes.png)
 
-### 社区菜谱
+## Community Feed
 
 ![Community Feed](./screenshots/community-feed.png)
 
-### 菜谱详情
+## Recipe Detail
 
 ![Recipe Detail](./screenshots/community-recipe-detail.png)
 
 ---
 
-## 架构预览
+# Architecture Preview
 
-### 系统架构
+## System Architecture
 
 ![System Architecture](./architecture/system-architecture-diagram.png)
 
-### AI 推荐流程
+## AI Recommendation Workflow
 
 ![AI Recommendation Workflow](./architecture/ai-recommendation-workflow.png)
 
-### 食材扫描流程
+## Ingredient Scan Flow
 
 ![Ingredient Scan Flow](./architecture/ingredient-scan-flow.png)
 
-### 向量检索流程
+## Vector Search Workflow
 
 ![Vector Search Workflow](./architecture/vector-search-workflow.png)
 
 ---
 
-## 技术栈概览
+# Technology Stack
 
-完整项目曾使用以下技术：
+## Mobile Application
 
-### 移动端
+* React Native
+* Expo
+* TypeScript
 
-- React Native
-- Expo
-- TypeScript
+## Backend
 
-### 后端
+* ASP.NET Core
+* Entity Framework Core
+* RESTful API
 
-- ASP.NET Core
-- Entity Framework Core
-- RESTful API
+## Database
 
-### 数据与推荐
+* PostgreSQL
+* pgvector
 
-- PostgreSQL
-- pgvector
-- 向量相似度检索
-- 标签与用户偏好匹配
+## AI Capabilities
 
-### AI 能力
+* OpenAI API
+* GPT-4o Vision
+* OpenAI Embedding API
+* Image Recognition
+* Structured Content Generation
 
-- OpenAI Vision
-- Embeddings
-- 图片识别
-- 结构化内容生成
+## Cloud & Engineering
 
-### 云端与工程化
-
-- 对象存储
-- 容器化部署
-- CI/CD
-
-公开版本仅保留展示材料和精选代码样例，不包含部署配置或完整工程配置。
+* Docker
+* GitHub Actions
+* AWS App Runner
 
 ---
 
-## 目录结构
+# Project Structure
 
 ```text
 README.md
 architecture/
-  README.md
-  system-architecture-diagram.png
-  core-database-er-diagram.png
-  ingredient-scan-flow.png
-  ai-recommendation-workflow.png
-  vector-search-workflow.png
-  deployment-architecture.png
 screenshots/
-  README.md
-  *.png
 demo/
-  README.md
 code-samples/
-  README.md
-  Community/
-  Recommendation/
-  AI/
 ```
 
 ---
 
-## 代码样例说明
+# Code Samples
 
-`code-samples/` 中的代码不是完整项目源码，只是为了展示关键功能实现方式而保留的代表性片段。
+The code samples contained in this repository are representative excerpts only and are not intended to be executed independently.
 
-这些样例可能依赖已移除的接口、实体、DTO、配置或上下文，因此不能直接运行。保留它们的目的是展示：
+They are provided to demonstrate:
 
-- 后端 API 设计
-- 业务逻辑组织
-- 权限与数据校验
-- 事务与并发处理
-- AI 服务封装
-- 推荐逻辑设计
-
----
-
-## 安全与公开范围
-
-出于安全、隐私和知识产权考虑，公开版本已移除以下内容：
-
-- 完整后端源码
-- 完整移动端源码
-- 数据库连接配置
-- API Key
-- 环境变量
-- 部署脚本
-- Docker 配置
-- 构建产物
-- 数据库迁移文件
-- 完整业务逻辑
-
-本仓库不包含任何可用于连接真实服务、数据库或第三方 API 的密钥和配置。
+* Backend API design
+* Business logic organization
+* Permission validation
+* AI service encapsulation
+* Recommendation workflow implementation
+* Frontend-backend integration
 
 ---
 
-## Demo
+# Security & Public Scope
 
-项目演示入口位于：
+For security, privacy, and intellectual property reasons, the public version excludes:
+
+* Complete frontend source code
+* Complete backend source code
+* API keys
+* Environment variables
+* Database configurations
+* Deployment scripts
+* Docker configurations
+* Build artifacts
+
+No production credentials or sensitive information are included in this repository.
+
+---
+
+# Demo
+
+Project demonstrations are available in:
 
 ```text
 demo/
@@ -248,8 +253,8 @@ demo/
 
 ---
 
-## 备注
+# Disclaimer
 
-本项目仅用于学习、展示和教育目的。
+This repository is intended solely for educational, portfolio, and technical communication purposes.
 
-仓库中的文档、截图、架构图和项目说明未经作者书面许可，不得复制、修改、二次分发或用于商业用途。
+All screenshots, architecture diagrams, and project documentation remain the intellectual property of the author.
