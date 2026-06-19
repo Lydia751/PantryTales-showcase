@@ -40,6 +40,6 @@ This directory showcases the main PantryTales product screens and core feature w
 
 - `recipe-detail.png`: Recipe detail page
 - `home-page.png`: Home page
-- `Recipe-scan.png`: Recipe scan result
+- `recipe-scan.png`: Recipe scan result
   
 These screenshots demonstrate the inventory-driven cooking experience, AI recommendations, community interaction, and household collaboration workflows.
