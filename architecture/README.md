@@ -1,86 +1,96 @@
-# 架构图说明
+# Architecture Documentation
 
-本目录用于展示 PantryTales 的核心系统架构和主要业务流程图。这里保留的是作品展示材料，不包含可运行的部署配置或完整系统实现。
+This directory contains the core system architecture diagrams and major workflow diagrams of PantryTales.
+
+The materials provided here are intended for project demonstration purposes only and do not include deployable configurations or complete system implementations.
 
 ---
 
-## 1. 系统架构图
+## 1. System Architecture Diagram
 
 ![System Architecture](./system-architecture-diagram.png)
 
-该图展示 PantryTales 的整体技术架构，包括：
+This diagram illustrates the overall technical architecture of PantryTales, including:
 
-- React Native 移动端
-- ASP.NET Core 后端服务
-- PostgreSQL 与 pgvector
-- AI 服务集成
-- 对象存储
-- 推荐与识别相关流程
+* React Native mobile application
+* ASP.NET Core backend services
+* PostgreSQL and pgvector
+* AI service integration
+* Object storage
+* Recommendation and recognition workflows
 
 ---
 
-## 2. 核心数据库 ER 图
+## 2. Core Database ER Diagram
 
 ![Database ER Diagram](./core-database-er-diagram.png)
 
-该图展示项目核心数据模型的关系，重点覆盖：
+This diagram presents the core data model relationships within the system, covering:
 
-- 用户
-- 家庭/成员
-- 库存食材
-- 菜谱
-- 点赞、收藏、评论
-- 菜谱食材关系
+* Users
+* Families and family members
+* Inventory ingredients
+* Recipes
+* Likes, saves, and comments
+* Recipe-ingredient relationships
 
-公开版本仅展示主要实体，省略完整数据库结构和迁移文件。
+The public version only includes the major entities. Complete database schemas and migration files are omitted.
 
 ---
 
-## 3. 食材识别流程
+## 3. Ingredient Scan Workflow
 
 ![Ingredient Scan Workflow](./ingredient-scan-flow.png)
 
-该流程展示图片或小票上传后，系统如何完成食材识别和入库：
+This workflow demonstrates how the system processes ingredient recognition and inventory updates after users upload images or receipts.
 
-- 上传图片
-- AI 识别食材或小票条目
-- 结构化提取结果
-- 用户确认
-- 食材名称标准化
-- 写入库存
+The process includes:
+
+* Uploading images
+* AI-based ingredient or receipt item recognition
+* Structured information extraction
+* User confirmation
+* Ingredient name normalization
+* Inventory update
 
 ---
 
-## 4. AI 推荐流程
+## 4. AI Recommendation Workflow
 
 ![AI Recommendation Workflow](./ai-recommendation-workflow.png)
 
-该流程展示智能菜谱推荐的主要步骤：
+This workflow illustrates the main steps involved in the Smart Recipe recommendation process.
 
-- 分析用户库存与偏好
-- 生成或读取向量表示
-- 语义检索候选菜谱
-- 根据偏好、限制和互动数据排序
-- 返回推荐结果
+The workflow includes:
+
+* Analyzing user inventory, dietary preferences, and serving requirements
+* Generating or retrieving vector representations
+* Semantic retrieval of candidate recipes
+* Ranking recipes based on user preferences and business rules
+* Returning personalized recommendations
 
 ---
 
-## 5. 向量检索流程
+## 5. Vector Retrieval Workflow
 
 ![Vector Search Workflow](./vector-search-workflow.png)
 
-该图说明项目如何使用向量表示和相似度搜索辅助推荐：
+This diagram explains how vector representations and similarity search are used to support recipe recommendations.
 
-- 生成菜谱 embedding
-- 存储向量
-- 执行相似度检索
-- 召回候选菜谱
-- 结合业务规则排序
+The workflow includes:
+
+* Generating recipe embeddings
+* Storing vector representations
+* Performing similarity search
+* Retrieving candidate recipes
+* Ranking results using business rules
 
 ---
 
-## 6. 部署架构图
+## 6. Deployment Architecture Diagram
 
 ![Deployment Architecture](./deployment-architecture.png)
 
-该图仅用于展示完整项目曾采用的云端部署思路。公开仓库不包含任何部署脚本、密钥、环境变量或数据库连接配置。
+This diagram is provided solely to demonstrate the cloud deployment strategy used in the original project.
+
+The public repository does not include deployment scripts, credentials, environment variables, or database connection configurations.
