@@ -1,17 +1,17 @@
-# 代码样例说明
+# Code Samples
 
-本目录只保留少量 C# 后端代表性代码，用于展示本人在 PantryTales 项目中负责的部分功能模块和实现能力。
+This directory contains a small collection of representative C# backend code samples demonstrating the core functionalities and implementation approaches I was responsible for in the PantryTales project.
 
-这些文件不是完整后端项目，不能直接运行。依赖接口、实体、DTO、配置和完整业务上下文已从公开仓库中移除。
+These files are not part of the complete backend application and are not intended to run independently. Related interfaces, entities, DTOs, configurations, and full business contexts have been removed from the public repository.
 
 ---
 
-## 目录
+## Directory Structure
 
 ```text
 code-samples/
   Community/
-  Recommendation/
+  Smart Recipe/
   AI/
 ```
 
@@ -19,25 +19,44 @@ code-samples/
 
 ## Community
 
-社区互动相关样例，包括评论、点赞、收藏和互动事件记录。
+Community-related code samples, including:
 
-## Recommendation
-
-菜谱推荐相关样例，包括偏好过滤、标签排序、向量相似度 fallback 和热门推荐逻辑。
-
-## AI
-
-AI 图片识别相关样例，包括食材识别、小票识别、菜品识别和基于图片生成菜谱内容。
+* Recipe publishing
+* Likes and saves
+* Comments and interaction management
+* User engagement tracking
 
 ---
 
-## 安全说明
+## Smart Recipe
 
-本目录不包含：
+Smart Recipe-related code samples, including:
 
-- API Key
-- 环境变量
-- 数据库连接字符串
-- 部署配置
-- 完整业务源码
-- 可运行项目配置
+- Inventory-based recipe generation
+- Dietary preference and allergy filtering
+- Serving size support
+- Personalized recipe generation workflows
+
+---
+
+## AI
+
+AI image recognition-related code samples, including:
+
+* Ingredient recognition
+* Receipt recognition
+* Recipe recognition
+* Generating structured recipe content from images
+
+---
+
+## Security Notice
+
+This directory does not include:
+
+* API keys
+* Environment variables
+* Database connection strings
+* Deployment configurations
+* Complete business source code
+* Runnable project configurations
