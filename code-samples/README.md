@@ -1,8 +1,8 @@
 # Code Samples
 
-This directory contains a small collection of representative C# backend code samples demonstrating the core functionalities and implementation approaches I was responsible for in the PantryTales project.
+This directory contains a small set of representative C# backend code samples from PantryTales. They are included to demonstrate the feature areas I worked on and the implementation approach used in the project.
 
-These files are not part of the complete backend application and are not intended to run independently. Related interfaces, entities, DTOs, configurations, and full business contexts have been removed from the public repository.
+These files are not a complete backend project and cannot be run directly. Interfaces, entities, DTOs, configuration files, and the full business context have been removed from the public repository.
 
 ---
 
@@ -19,44 +19,25 @@ code-samples/
 
 ## Community
 
-Community-related code samples, including:
-
-* Recipe publishing
-* Likes and saves
-* Comments and interaction management
-* User engagement tracking
-
----
+Community interaction samples, including comments, likes, saves, and interaction event tracking.
 
 ## Smart Recipe
 
-Smart Recipe-related code samples, including:
-
-- Inventory-based recipe generation
-- Dietary preference and allergy filtering
-- Serving size support
-- Personalized recipe generation workflows
-
----
+Smart recipe samples, including authenticated recipe generation endpoints, forced refresh, Server-Sent Events streaming, household-aware recipe access, recipe creation, tag handling, ingredient persistence, updates, and deletion.
 
 ## AI
 
-AI image recognition-related code samples, including:
-
-* Ingredient recognition
-* Receipt recognition
-* Recipe recognition
-* Generating structured recipe content from images
+AI image recognition samples, including ingredient recognition, receipt recognition, dish recognition, and recipe content generation from images.
 
 ---
 
-## Security Notice
+## Security Notes
 
 This directory does not include:
 
-* API keys
-* Environment variables
-* Database connection strings
-* Deployment configurations
-* Complete business source code
-* Runnable project configurations
+- API keys
+- Environment variables
+- Database connection strings
+- Deployment configuration
+- Complete business source code
+- Runnable project configuration

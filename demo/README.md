@@ -1,18 +1,18 @@
-# Demo 说明
+# Demo
 
-本目录用于记录 PantryTales 的演示材料。
+This directory contains demo materials for PantryTales.
 
-## 完整流程演示
+## Full Workflow Demo
 
 https://youtube.com/shorts/5ZqXMbg2erg
 
-该演示覆盖：
+The demo covers:
 
-- 家庭协作
-- 食材识别
-- 库存管理
-- 智能菜谱推荐
-- 烹饪助手流程
-- 烹饪历史
+- Household collaboration
+- Ingredient recognition
+- Inventory management
+- Smart recipe recommendations
+- Cooking assistant workflow
+- Cooking history
 
-公开仓库仅保留演示入口和说明，不包含可运行项目源码。
+The public repository only keeps the demo entry point and documentation. It does not include runnable project source code.

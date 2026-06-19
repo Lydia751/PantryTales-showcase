@@ -1,13 +1,13 @@
-# AI 代码样例
+# AI Code Samples
 
-本目录保留 AI 图片识别相关的 C# 后端样例代码。
+This directory contains C# backend code samples related to AI image recognition.
 
-## 包含文件
+## Included Files
 
-- `VisionController.cs`：图片识别 API 入口，包含食材识别、菜品识别和菜谱内容生成。
-- `VisionService.cs`：AI 识别编排服务，包含图片校验、下载和 Provider 调用。
-- `OpenAIVisionProvider.cs`：视觉模型调用与结果解析逻辑。
+- `VisionController.cs`: Image recognition API entry point, including ingredient recognition, dish recognition, and recipe content generation.
+- `VisionService.cs`: AI recognition orchestration service, including image validation, download handling, and provider calls.
+- `OpenAIVisionProvider.cs`: Vision model invocation and result parsing logic.
 
-这些文件用于展示图片识别、结构化 JSON 输出、异常处理和 AI 服务封装方式。
+These files demonstrate image recognition, structured JSON output, exception handling, and AI service encapsulation.
 
-公开版本不包含任何真实 API Key 或环境变量。
+The public version does not include any real API keys or environment variables.

@@ -90,7 +90,7 @@ Main responsibilities include:
 Representative code:
 
 ```text
-code-samples/Recommendation/
+code-samples/Smart Recipe/
 ```
 
 This module demonstrates how inventory data, user preferences, and serving requirements are integrated to provide personalized cooking suggestions.
@@ -221,7 +221,7 @@ They are provided to demonstrate:
 * Business logic organization
 * Permission validation
 * AI service encapsulation
-* Recommendation workflow implementation
+* Smart Recipe workflow implementation
 * Frontend-backend integration
 
 ---
